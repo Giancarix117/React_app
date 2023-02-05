@@ -1,6 +1,8 @@
 import * as React from 'react';
+import Button from './Button';
+import Clicky from './anothabutton';
 
-const App = () => {
+const App = ({value = 0}) => {
   const [count, setCount] = React.useState(0);
 
   const handleClick = () => {
@@ -9,12 +11,16 @@ const App = () => {
 
   return (
     <div>
-      <button type="button" onClick={handleClick}>
+      <Button type="button" onClick={handleClick} data-testid="counter-button">
         Click Me
-      </button>
+      </Button>
 
-      {count}
+      <pre data-testid="counter-result">{value + count}</pre>
+
+      <pre data-testid="counter-starting-value">{value}</pre>
     </div>
+
+    
   );
 };
 
