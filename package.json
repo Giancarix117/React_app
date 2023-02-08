@@ -21,7 +21,8 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src test --check",
     "prettier:fix": "npm run prettier -- --write",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "eslint:github-action": "eslint src/"
   },
   "browserslist": {
     "production": [
