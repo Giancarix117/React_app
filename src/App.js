@@ -1,6 +1,5 @@
 import * as React from "react";
 import Button from "./Button";
-import Clicky from "./anothabutton";
 
 const App = ({ value = 0 }) => {
   const [count, setCount] = React.useState(0);

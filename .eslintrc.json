@@ -12,6 +12,7 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "no-undef": "off"
+    "no-undef": "off",
+    "react/prop-types": "off"
   }
 }
