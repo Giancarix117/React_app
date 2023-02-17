@@ -8,17 +8,18 @@ jobs:
     name: Run ESLint
     runs-on: ubuntu-latest
     steps:
-      
       # Check out the repository
       - uses: actions/checkout@v3
 
       # Install Node.js
       - uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 18
 
-      # Install your dependencies
       - run: npm i
 
-      # Run ESLint
-      - uses: eslint/github-action@v0
+      - run: npm run format
+
+      - run: npm run lint
+
+      - run: npm test
